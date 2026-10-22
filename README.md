@@ -38,9 +38,11 @@ Played at the original speed. These recordings are not sped up.
 
 ## Build
 
-You need CMake 3.24 or newer, Ninja, a C++20 compiler, and Qt 6.10 (Core, Gui, Widgets, Quick, Qml, DBus), plus Abseil, Protobuf, OpenSSL 3, sdbus-c++, nlohmann-json, libcurl, libsystemd, and BlueZ.
-
+You need CMake 3.24 or newer, Ninja, a C++20 compiler, and Qt 6.10 (Core, Gui, Widgets, Quick, Qml, DBus), plus Abseil, Protobuf, OpenSSL 3, sdbus-c++, nlohmann-json, libcurl, libsystemd, and BlueZ which are automatically downloaded via setup.
+sh bash script
 ```bash
+chmod +x setup.sh
+./setup.sh 
 cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 ./build/ui/quickshare
